@@ -12369,7 +12369,7 @@ exports = module.exports = __webpack_require__(102)(undefined);
 
 
 // module
-exports.push([module.i, "html, body {\n  font-family: 'Righteous', cursive;\n  color: #434343; }\n\na {\n  color: #434343; }\n\n#home {\n  text-align: center;\n  margin: 0 auto;\n  width: 80%; }\n  #home .home-main-icon {\n    font-size: 42vw; }\n  #home .home-section-sns {\n    display: flex;\n    padding: 12px;\n    justify-content: center; }\n    #home .home-section-sns .sns-icon {\n      font-size: 10vw;\n      margin: 8px; }\n  #home img {\n    max-width: 500px;\n    width: 100%; }\n\n#side-bar {\n  padding: 10px;\n  background: #f0f0f0;\n  height: 100%; }\n  #side-bar ul {\n    list-style-type: none;\n    padding: 0; }\n\n#content-area {\n  flex: 1;\n  padding: 10px; }\n", ""]);
+exports.push([module.i, "html, body {\n  font-family: 'Rubik', sans-serif;\n  color: #434343; }\n\na {\n  color: #434343; }\n\n#home {\n  text-align: center;\n  margin: 0 auto;\n  width: 80%; }\n  #home .home-main-icon {\n    font-size: 42vw; }\n  #home .home-section-sns {\n    display: flex;\n    padding: 12px;\n    justify-content: center; }\n    #home .home-section-sns .sns-icon {\n      font-size: 10vw;\n      margin: 8px; }\n  #home img {\n    max-width: 500px;\n    width: 100%; }\n\n#side-bar {\n  padding: 10px;\n  background: #f0f0f0;\n  height: 100%; }\n  #side-bar ul {\n    list-style-type: none;\n    padding: 0; }\n\n#content-area {\n  flex: 1;\n  padding: 10px; }\n", ""]);
 
 // exports
 
