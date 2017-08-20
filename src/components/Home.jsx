@@ -1,12 +1,15 @@
 import React from 'react';
 
+import icon from '../images/icon.png';
+
 export default class Home extends React.Component {
     render() {
         return (
             <div id="home">
                 <h1>Welcome to Pictogram Fun !!!</h1>
 
-                <i className="fa fa-universal-access home-main-icon" aria-hidden="true"/>
+                <img id="main-icon" src={icon} alt="pictogram.fun main icon"/>
+
 
                 <div className="home-section-sns">
                     <a href="https://www.instagram.com/pictogram.fun/" target="_blank">
@@ -15,6 +18,19 @@ export default class Home extends React.Component {
                     <a href="https://twitter.com/pictogram_fun" target="_blank">
                         <i className="fa fa-twitter sns-icon" aria-hidden="true"/>
                     </a>
+                </div>
+
+                <div className="section">
+                    <p className="text">世界で最も多く危険な仕事をこなし、国境・言語・性別・文化、あらゆるボーダーを超え活躍するタフでジェントルなヒト、ピクトグラム！
+                        ピクトグラムの活動を讃える、ピクトグラムに捧げるピクトグラムのためのインスタグラム〜〜</p>
+
+                    <p className="text">Who does skillfully perform a difficult and dangerous job?
+                        That’s Pictogram! His job is “alert”. He uses his body and tell us our dangerous. He doesn’t
+                        care
+                        about cross-border, language barrier,gender, and cultures.</p>
+
+                    <p className="text-sm">※ピクトグラムとは・・・
+                        非常口のあの人。言語に制約されず体を張って伝達を直感的に行う達人。</p>
                 </div>
             </div>
         );
