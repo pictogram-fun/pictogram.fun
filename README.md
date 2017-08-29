@@ -11,9 +11,3 @@ $ npm install
 ```
 $ npm run start
 ```
-
-# Deploy to gh-pages
-
-```
-$ npm run deploy
-```

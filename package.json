@@ -7,8 +7,7 @@
   "author": "tanakaworld <yutaro.tanaka.world@gmail.com>",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --progress --profile --colors",
-    "deploy": "npm run build && gh-pages -d dist"
+    "build": "webpack --progress --profile --colors"
   },
   "dependencies": {
     "html-webpack-plugin": "^2.26.0",
