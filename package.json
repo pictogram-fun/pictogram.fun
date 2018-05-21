@@ -1,36 +1,20 @@
 {
   "name": "pictogram.fun",
   "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "main": "index.js",
+  "description": "Pictogram.fun!!!",
   "author": "tanakaworld <yutaro.tanaka.world@gmail.com>",
+  "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack --progress --profile --colors"
+    "setup": "npm run clean && npm run copyassets && npm run copystatic",
+    "clean": "mkdir -p public && rm -rf public/*",
+    "copyassets": "cp -R functions/nuxt/dist/ public/assets",
+    "copystatic": "cp -R src/static/* public",
+    "dev": "cd src/ && yarn run dev",
+    "serve": "firebase serve --only hosting,functions",
+    "build": "yarn run clean && cd src/ && yarn run build && cd .. && yarn run copyassets && yarn run copystatic",
+    "deploy": "firebase use pictogram-fun && firebase deploy"
   },
-  "dependencies": {
-    "html-webpack-plugin": "^2.26.0",
-    "path": "^0.12.7",
-    "react": "^15.4.2",
-    "react-doc-meta": "^0.2.0",
-    "react-dom": "^15.4.2",
-    "react-favicon": "0.0.9",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "css-loader": "^0.28.4",
-    "file-loader": "^0.11.2",
-    "gh-pages": "^1.0.0",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.5",
-    "style-loader": "^0.18.2"
+  "engines": {
+    "node": "6.14.2"
   }
 }
