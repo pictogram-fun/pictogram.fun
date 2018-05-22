@@ -17,10 +17,12 @@
 
   html, body
     font-family: 'Rubik', sans-serif
-    color: $color-base-text
+    color: $color-base-gray
 
   a
-    color: $color-base-text
+    color: $color-base-gray
+    &:hover
+      color: $color-base-blue
 
   h1
     font-size: 32px

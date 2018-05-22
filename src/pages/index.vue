@@ -9,11 +9,8 @@
     </div>
 
     <div class="home-section-sns">
-      <a href="https://www.instagram.com/pictogram.fun/" target="_blank">
-        <i class="fa fa-instagram sns-icon" aria-hidden="true"/>
-      </a>
-      <a href="https://twitter.com/pictogram_fun" target="_blank">
-        <i class="fa fa-twitter sns-icon" aria-hidden="true"/>
+      <a v-for="(info, index) in snsInfo" :href="info.url" target="_blank" :key="`sns-link-${index}`">
+        <i class="fa sns-icon" :class="info.faIcon" aria-hidden="true"/>
       </a>
     </div>
   </section>
@@ -21,7 +18,24 @@
 
 <script>
   export default {
-    components: {},
+    computed: {
+      snsInfo() {
+        return [
+          {
+            url: 'https://www.instagram.com/pictogram.fun/',
+            faIcon: 'fa-instagram',
+          },
+          {
+            url: 'https://twitter.com/pictogram_fun',
+            faIcon: 'fa-twitter',
+          },
+          {
+            url: 'https://github.com/pictogram-fun/pictogram.fun',
+            faIcon: 'fa-github',
+          },
+        ];
+      },
+    },
   };
 </script>
 
