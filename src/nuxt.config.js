@@ -22,6 +22,9 @@ module.exports = {
       {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rubik'},
     ],
   },
+  plugins: [
+    '~/plugins/vue-konva',
+  ],
   loading: {color: '#22419B'},
   buildDir: '../functions/nuxt',
   build: {
@@ -46,6 +49,9 @@ module.exports = {
       name: 'pictogram.fun',
       lang: 'ja',
     },
+    vendor: [
+      'vue-konva',
+    ],
     extend(config, {isDev, isClient}) {
       if (isDev && isClient) {
         config.module.rules.push({
