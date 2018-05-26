@@ -2,15 +2,17 @@
   <div id="page-human2picto">
     <h1>human2picto</h1>
 
+
+    <div>
+      <button @click="convert">Convert</button>
+    </div>
+
     <section class="contents">
-      <div>
+      <div class="photo-wrap">
         <img id="human" :ref="'human'"
              width="300px"
-             src="../../../images/dev/human2picto/human1.jpg"/>
-      </div>
-
-      <div>
-        <button @click="convert">Convert</button>
+             :src="humanPhotoSrc"/>
+        <input class="file-select" type="file" ref="file-selected" @change="onFileChange"/>
       </div>
 
       <div v-if="hasPoseData">
@@ -30,12 +32,11 @@
 
 <script>
   import * as posenet from '@tensorflow-models/posenet';
+  import defaultPhoto from '../../../images/dev/human2picto/human1.jpg';
 
   const imageScaleFactor = 0.5;
   const outputStride = 16;
   const flipHorizontal = false;
-
-  // TODO dynamically upload photo
 
   export default {
     data() {
@@ -43,9 +44,24 @@
         hasPoseData: false,
         poseKeyPoints: [],
         debugPoints: [],
+        humanPhotoSrc: defaultPhoto,
       };
     },
     methods: {
+      onFileChange() {
+        const fileSelected = this.$refs['file-selected'];
+
+        if (fileSelected && fileSelected.files.length > 0) {
+          const file = fileSelected.files[0];
+
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            this.humanPhotoSrc = e.target.result;
+            this.convert();
+          };
+          reader.readAsDataURL(file);
+        }
+      },
       convert() {
         const imageElement = this.$refs['human'];
         posenet.load().then((net) => {
@@ -179,4 +195,21 @@
   #page-human2picto
     .contents
       display: flex
+
+    .photo-wrap
+      width: 300px
+      height: auto
+      position: relative
+      overflow: hidden
+
+      .file-select
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        outline: none
+        width: 100%
+        height: 100%
+
 </style>
