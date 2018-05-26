@@ -2455,6 +2455,10 @@ dotenv@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
 
+dropzone@^5.2.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.4.0.tgz#3290c07f59b189eb5a11e99a58c9b2adae5acfec"
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -5314,6 +5318,12 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
+nuxt-dropzone@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/nuxt-dropzone/-/nuxt-dropzone-0.2.7.tgz#8460aee6eb36b281601d5e815b91435a3147597d"
+  dependencies:
+    vue2-dropzone "3.0.3"
+
 nuxt@1.0.0-rc11:
   version "1.0.0-rc11"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-rc11.tgz#e30ea7f203cb936b3643527d897501e45eb0965e"
@@ -8140,6 +8150,12 @@ vue-template-compiler@~2.4.2:
 vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
+
+vue2-dropzone@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/vue2-dropzone/-/vue2-dropzone-3.0.3.tgz#7ff58f7f4c1c80f5867b6cb4bdbbddb4edb6bad8"
+  dependencies:
+    dropzone "^5.2.0"
 
 vue@2.5.16, vue@^2.5.2:
   version "2.5.16"
